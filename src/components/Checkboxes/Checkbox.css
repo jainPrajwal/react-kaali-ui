@@ -1,0 +1,147 @@
+
+.checkbox-label.checkboxBlack-label input:checked ~ .checkmark {
+    background-color: #282c3f;
+    color: var(--font-color);
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+  }
+  .checkbox-label.checkboxBlack-label .checkmark::after {
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .checkbox-label.checkboxBlack-label .checkmark {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: #282c3f;
+    color: var(--font-color);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    outline: none;
+    border: none;
+  }
+  .checkbox-label.checkboxBlack-label:hover input ~ .checkmark {
+    background-color: #101429;
+  }
+
+  
+/* green checkbox */
+
+.checkbox-label.checkboxGreen-label input:checked ~ .checkmark {
+    background-color: var(--green);
+    color: var(--font-color);
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+  }
+  .checkbox-label.checkboxGreen-label .checkmark::after {
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .checkbox-label.checkboxGreen-label .checkmark {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: var(--green);
+    color: var(--font-color);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    outline: none;
+    border: none;
+  }
+  .checkbox-label.checkboxGreen-label:hover input ~ .checkmark {
+    background-color: darkgreen;
+  }
+  
+  /* red checkbox */
+  .checkbox-label.checkboxRed-label input:checked ~ .checkmark {
+    background-color: red;
+    color: var(--font-color);
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+  }
+  .checkbox-label.checkboxRed-label .checkmark::after {
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .checkbox-label.checkboxRed-label .checkmark {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: red;
+    color: var(--font-color);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    outline: none;
+    border: none;
+  }
+  .checkbox-label.checkboxRed-label:hover input ~ .checkmark {
+    background-color: rgb(177, 14, 14);
+  }
+  
+  /* blue checkbox */
+  .checkbox-label.checkboxBlue-label input:checked ~ .checkmark {
+    background-color: var(--blue);
+    color: var(--font-color);
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+  }
+  .checkbox-label.checkboxBlue-label .checkmark::after {
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    position: absolute;
+    left: 50%;
+  
+  
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .checkbox-label.checkboxBlue-label .checkmark {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: var(--blue);
+    color: var(--font-color);
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    outline: none;
+    border: none;
+  }
+  .checkbox-label.checkboxBlue-label:hover input ~ .checkmark {
+    background-color: blue;
+  }
