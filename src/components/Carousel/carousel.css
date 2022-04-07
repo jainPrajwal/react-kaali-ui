@@ -1,0 +1,15 @@
+.carousel:hover {
+  cursor: pointer;
+}
+.Slide {
+  transform: translateX(0);
+  transition: opacity 200ms ease, transform 200ms ease-in;
+}
+
+.Slide[aria-hidden="true"] {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: -1;
+}
+
+
