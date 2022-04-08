@@ -1,4 +1,11 @@
-const Avatar = ({ size, isfallback, fallbackText, fallbackColor, showStatus, typeOfStatus }) => {
+const Avatar = ({
+  size,
+  isfallback,
+  fallbackText,
+  fallbackColor,
+  showStatus,
+  typeOfStatus,
+}) => {
   return isfallback ? (
     <div className="avatar-container">
       <div className="image-container">
@@ -8,21 +15,25 @@ const Avatar = ({ size, isfallback, fallbackText, fallbackColor, showStatus, typ
         >
           {fallbackText}
         </div>
-        {showStatus && <span className={`status status-${typeOfStatus}`}></span>}
+        {showStatus && (
+          <span className={`status status-${typeOfStatus}`}></span>
+        )}
       </div>
     </div>
   ) : (
     <div className="avatar-container">
-       <div className="image-container">
-      <img
-        src="https://cdn1.vectorstock.com/i/1000x1000/23/70/man-avatar-icon-flat-vector-19152370.jpg"
-        alt="avatar"
-        className={`avatar avatar-${size}`}
-      />
-      {showStatus && <span className={`status status-${typeOfStatus}`}></span>}
-    </div>
+      <div className="image-container">
+        <img
+          src="https://cdn1.vectorstock.com/i/1000x1000/23/70/man-avatar-icon-flat-vector-19152370.jpg"
+          alt="avatar"
+          className={`avatar avatar-${size}`}
+        />
+        {showStatus && (
+          <span className={`status status-${typeOfStatus}`}></span>
+        )}
+      </div>
     </div>
   );
 };
 
-export {Avatar}
+export { Avatar };
