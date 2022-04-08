@@ -12,7 +12,9 @@ import {
   Slides,
 } from "../components";
 
+import "./styles.css";
 import "../components/Carousel/carousel.css";
+
 import { slides } from "../components/Carousel/slides/slides";
 // import { slides } from "../components/Carousel/slides/slides";
 
