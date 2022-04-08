@@ -1,5 +1,5 @@
 import { useEffect, useReducer, useState } from "react";
-import {
+import  {
   Carousel,
   Controls,
   IconButton,
@@ -11,8 +11,9 @@ import {
   SlideNavItem,
   Slides,
 } from "../components";
-import { slides } from "../components/Carousel/slides/slides";
+
 import "../components/Carousel/carousel.css";
+import { slides } from "../components/Carousel/slides/slides";
 
 export default {
   title: "Carousel",
