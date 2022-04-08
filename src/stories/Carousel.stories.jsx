@@ -1,5 +1,5 @@
 import { useEffect, useReducer, useState } from "react";
-import  {
+import {
   Carousel,
   Controls,
   IconButton,
@@ -14,6 +14,7 @@ import  {
 
 import "../components/Carousel/carousel.css";
 import { slides } from "../components/Carousel/slides/slides";
+// import { slides } from "../components/Carousel/slides/slides";
 
 export default {
   title: "Carousel",
@@ -22,6 +23,7 @@ export default {
 
 export const CarouselEcommerce = (args) => {
   const [timer, setTimer] = useState(null);
+  const { slides } = args;
   const [state, dispatch] = useReducer(reducerCallbackFunction, {
     currentIndex: 0,
   });
@@ -38,21 +40,22 @@ export const CarouselEcommerce = (args) => {
   }, []);
   useEffect(() => () => clearInterval(timer), [timer]);
   return (
-    <Carousel timerObj={{ timer, setTimer, handleStartTimer }}>
+    <Carousel timerObj={{ timer, setTimer, handleStartTimer, slides }}>
       <Slides>
-        {slides.map((image, index) => {
-          return (
-            <Slide
-              key={index}
-              id={`image-${index}`}
-              image={image.img}
-              title={image.title}
-              isCurrent={index === state.currentIndex}
-              takeFocus={state.takeFocus}
-              children={image.content}
-            />
-          );
-        })}
+        {slides &&
+          slides.map((image, index) => {
+            return (
+              <Slide
+                key={index}
+                id={`image-${index}`}
+                image={image.img}
+                title={image.title}
+                isCurrent={index === state.currentIndex}
+                takeFocus={state.takeFocus}
+                children={image.content}
+              />
+            );
+          })}
       </Slides>
 
       <SlideNav>
@@ -84,3 +87,5 @@ export const CarouselEcommerce = (args) => {
     </Carousel>
   );
 };
+
+CarouselEcommerce.args = { slides };
