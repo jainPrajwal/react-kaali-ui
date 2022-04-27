@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 
-const Alert = ({type, text}) => {
+const Alert = ({ type, text }) => {
   const [isHidden, Hide] = useState(false);
   useEffect(() => {
-    
     setTimeout(() => {
-     
       if (isHidden) Hide(false);
     }, 3000);
   }, [isHidden]);
@@ -20,7 +18,6 @@ const Alert = ({type, text}) => {
       >
         &times;
       </span>
-      
     </div>
   );
 };
