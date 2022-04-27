@@ -10,6 +10,19 @@
 .modal {
   display: block;
 }
+
+.tooltip.tooltip-light.tooltip-top::after {
+  border-color: var(--kaali-main-background) transparent transparent transparent;
+}
+.tooltip.tooltip-light.tooltip-bottom::after {
+  border-color: transparent transparent var(--kaali-main-background) transparent;
+}
+.tooltip.tooltip-light.tooltip-right::after {
+  border-color: transparent transparent transparent var(--kaali-main-background);
+}
+.tooltip.tooltip-light.tooltip-left::after {
+  border-color: transparent var(--kaali-main-background) transparent transparent;
+}
 @media only screen and (max-width: 480px) {
   .carousel-track-container {
     height: 100px;
