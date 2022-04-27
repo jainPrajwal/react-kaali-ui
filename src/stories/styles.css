@@ -1,7 +1,4 @@
 @import url("https://kaaliui.netlify.app/kaali.css");
-<<<<<<< HEAD
-
-=======
 .carousel-nav {
   position: relative;
   top: 10px;
@@ -10,7 +7,9 @@
 .carousel-button {
   transform: translateY(0px);
 }
-
+.modal {
+  display: block;
+}
 @media only screen and (max-width: 480px) {
   .carousel-track-container {
     height: 100px;
@@ -65,4 +64,3 @@
     height: 8px;
   }
 }
->>>>>>> carousel
