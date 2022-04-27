@@ -1,0 +1,1 @@
+export const ModalRow = ({children, extendedClassNames}) =>  <div className={`row ${extendedClassNames}`}>{children}</div>
