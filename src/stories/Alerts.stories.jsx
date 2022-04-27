@@ -1,5 +1,5 @@
 import React from "react";
-import { Alert } from "../components";
+import { Alert } from "../components/Alerts";
 import "./styles.css";
 
 export default {

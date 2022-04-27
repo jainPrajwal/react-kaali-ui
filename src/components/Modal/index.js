@@ -5,3 +5,4 @@ export { ModalHeader } from "./ModalHeader";
 export { ModalOverlay } from "./ModalOverlay";
 export { ModalRow } from "./ModalRow";
 export { ModalFooter } from "./ModalFooter";
+export {Checkbox} from "./Checkbox";
