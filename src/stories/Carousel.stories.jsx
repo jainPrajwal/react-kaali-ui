@@ -80,12 +80,12 @@ export const CarouselEcommerce = (args) => {
         <IconButton
           arial-label="Previous Slide"
           children={<LeftArrowImage className="carousel-button-left" />}
-          onClick={() => dispatch({ type: "PREV" })}
+          onClick={() => carouselDispatch({ type: "PREV" })}
         />
         <IconButton
           arial-label="Next Slide"
           children={<RightArrowImage className="carousel-button-right" />}
-          onClick={() => dispatch({ type: "NEXT" })}
+          onClick={() => carouselDispatch({ type: "NEXT" })}
         />
       </Controls>
     </Carousel>
