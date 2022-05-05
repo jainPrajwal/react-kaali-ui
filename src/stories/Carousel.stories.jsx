@@ -28,12 +28,12 @@ export default {
 export const CarouselEcommerce = (args) => {
   const [timer, setTimer] = useState(null);
   const { slides } = args;
-  const [state, carouselDispatch] = useReducer(reducerCallbackFunction, {
+  const [state, dispatch] = useReducer(reducerCallbackFunction, {
     currentIndex: 0,
   });
   const handleStartTimer = () => {
     const intervalId = setInterval(() => {
-      carouselDispatch({
+      dispatch({
         type: "NEXT",
       });
     }, 5000);
@@ -44,9 +44,11 @@ export const CarouselEcommerce = (args) => {
   }, []);
   useEffect(() => () => clearInterval(timer), [timer]);
   return (
-    <Carousel timerObj={{ timer, setTimer, handleStartTimer, slides, carouselDispatch }}>
+    <Carousel timerObj={{ timer, setTimer, handleStartTimer, slides, state, dispatch}}>
       <Slides>
-        {slides &&
+ 
+        {
+        slides &&
           slides.map((image, index) => {
             return (
               <Slide
@@ -69,7 +71,7 @@ export const CarouselEcommerce = (args) => {
               key={index}
               isCurrent={index === state.currentIndex}
               onClick={() => {
-                carouselDispatch({ type: "GOTO", payload: index });
+                dispatch({ type: "GOTO", payload: index });
               }}
             />
           );
@@ -80,12 +82,12 @@ export const CarouselEcommerce = (args) => {
         <IconButton
           arial-label="Previous Slide"
           children={<LeftArrowImage className="carousel-button-left" />}
-          onClick={() => carouselDispatch({ type: "PREV" })}
+          onClick={() => dispatch({ type: "PREV" })}
         />
         <IconButton
           arial-label="Next Slide"
           children={<RightArrowImage className="carousel-button-right" />}
-          onClick={() => carouselDispatch({ type: "NEXT" })}
+          onClick={() => dispatch({ type: "NEXT" })}
         />
       </Controls>
     </Carousel>
