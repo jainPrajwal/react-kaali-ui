@@ -1,4 +1,7 @@
-import { Avatar } from "../components/Avatar/Avatar";
+
+import React from "react";
+
+import { Avatar } from "../components";
 import "./styles.css";
 export default {
   title: "Avatar",

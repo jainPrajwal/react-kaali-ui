@@ -3,4 +3,6 @@ export * from "./components/Avatar";
 export * from "./components/Button"
 export * from "./components/Carousel";
 export * from "./components/Modal";
+export * from "./components/CustomRadioButtons";
+export * from "./components/Tooltip";
 

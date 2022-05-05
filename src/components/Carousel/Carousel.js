@@ -1,3 +1,4 @@
+import React from "react";
 const Carousel = ({ timerObj, slider, ...props }) => {
   const handlePauseTimer = () => {
     clearInterval(timerObj.timer);

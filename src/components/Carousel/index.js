@@ -6,6 +6,6 @@ export { Slide } from "./Slide";
 export { SlideNav } from "./SlideNav";
 export { SlideNavItem } from "./SlideNavItem";
 export { Slides } from "./Slides";
-export { Carousel } from "./Carousel.jsx";
+export { Carousel } from "./Carousel";
 export { reducerCallbackFunction } from "./ReducerCarousel";
 export default "./carousel.css";

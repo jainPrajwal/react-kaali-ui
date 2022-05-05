@@ -1,4 +1,6 @@
 import { useEffect, useReducer, useState } from "react";
+import React from "react";
+
 import {
   Carousel,
   Controls,
@@ -26,12 +28,12 @@ export default {
 export const CarouselEcommerce = (args) => {
   const [timer, setTimer] = useState(null);
   const { slides } = args;
-  const [state, dispatch] = useReducer(reducerCallbackFunction, {
+  const [state, carouselDispatch] = useReducer(reducerCallbackFunction, {
     currentIndex: 0,
   });
   const handleStartTimer = () => {
     const intervalId = setInterval(() => {
-      dispatch({
+      carouselDispatch({
         type: "NEXT",
       });
     }, 5000);
@@ -42,7 +44,7 @@ export const CarouselEcommerce = (args) => {
   }, []);
   useEffect(() => () => clearInterval(timer), [timer]);
   return (
-    <Carousel timerObj={{ timer, setTimer, handleStartTimer, slides }}>
+    <Carousel timerObj={{ timer, setTimer, handleStartTimer, slides, carouselDispatch }}>
       <Slides>
         {slides &&
           slides.map((image, index) => {
@@ -67,7 +69,7 @@ export const CarouselEcommerce = (args) => {
               key={index}
               isCurrent={index === state.currentIndex}
               onClick={() => {
-                dispatch({ type: "GOTO", payload: index });
+                carouselDispatch({ type: "GOTO", payload: index });
               }}
             />
           );

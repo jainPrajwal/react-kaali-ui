@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import React from "react";
+
 import {
   ModalBody,
   ModalContainer,
@@ -6,7 +8,7 @@ import {
   ModalHeader,
   ModalOverlay,
   ModalRow,
-} from "../components/Modal";
+} from "../components";
 import { Checkbox } from "../components/Modal/Checkbox";
 import { Modal } from "../components/Modal/Modal";
 

@@ -1,3 +1,4 @@
+import React from "react";
 const SlideNavItem = ({ isCurrent, ...props }) => {
   return (
     <li className="carousel-nav-item">

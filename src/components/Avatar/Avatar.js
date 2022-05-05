@@ -1,4 +1,5 @@
-const Avatar = ({
+import React from "react";
+export const Avatar = ({
   size,
   isfallback,
   fallbackText,
@@ -35,5 +36,3 @@ const Avatar = ({
     </div>
   );
 };
-
-export { Avatar };

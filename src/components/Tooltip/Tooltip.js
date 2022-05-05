@@ -1,3 +1,5 @@
+import React from "react";
+import "../../styles.css";
 export const Tooltip = ({ position, mode = `light` }) => {
   const style = {
     color: mode === `dark` ? `black` : `var(--kaali-font-color)`,

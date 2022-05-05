@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState , } from "react";
+import React from "react";
+import "../../styles.css";
 
-const Alert = ({ type, text }) => {
+export const Alert = ({ type, text }) => {
   const [isHidden, Hide] = useState(false);
   useEffect(() => {
     setTimeout(() => {
@@ -21,5 +23,3 @@ const Alert = ({ type, text }) => {
     </div>
   );
 };
-
-export { Alert };
