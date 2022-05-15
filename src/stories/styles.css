@@ -7,9 +7,9 @@
 .carousel-button {
   transform: translateY(0px);
 }
-.modal {
+/* .modal {
   display: block;
-}
+} */
 
 .tooltip.tooltip-light.tooltip-top::after {
   border-color: var(--kaali-main-background) transparent transparent transparent;

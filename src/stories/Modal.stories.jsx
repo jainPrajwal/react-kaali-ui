@@ -43,7 +43,7 @@ const Template = (args) => {
       {!isHidden && (
         <Modal>
           <ModalOverlay isHidden={isHidden}>
-            <div className="modal">
+            <div className="modal" style={{display: isHidden ? `none`: `block`}}>
               <ModalContainer>
                 <ModalHeader handleModalClose={handleModalClose}>
                   {modalHeader || `Modal Header`}
