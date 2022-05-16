@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import "../../styles.css";
-export const Tooltip = ({ children, position, mode = `light`, label, extendedStyles }) => {
+export const Tooltip = ({
+  children,
+  position = `top`,
+  mode = `light`,
+  label = `label`,
+  css={},
+}) => {
   const style = {
     color: mode === `dark` ? `black` : `var(--kaali-font-color)`,
     backgroundColor: mode === `dark` ? `var(--kaali-font-color)` : `black`,
   };
   const [showTooltip, setShowTooltip] = useState(false);
   return (
-    <div>
-
+    <>
       <span
-       style={{ position: `relative` }}
+        style={{ position: `relative` }}
         onMouseOver={() => {
           console.log(`on mouse over`);
           setShowTooltip(true);
@@ -22,17 +27,12 @@ export const Tooltip = ({ children, position, mode = `light`, label, extendedSty
       >
         {children}
         <span
-       
-        className={`tooltip tooltip-${position || `top`} tooltip-${mode}` }
-        style={{...style, visibility: showTooltip ? `visible` : `hidden`,}}
-      >
-        {label || `label `}
+          className={`tooltip tooltip-${position} tooltip-${mode}`}
+          style={{ ...style, ...css, visibility: showTooltip ? `visible` : `hidden` }}
+        >
+          {label}
+        </span>
       </span>
-      </span>
-     
-
-
-     
-    </div>
+    </>
   );
 };
