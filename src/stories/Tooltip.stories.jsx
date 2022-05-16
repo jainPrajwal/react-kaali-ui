@@ -1,4 +1,4 @@
-import { Tooltip } from "../components";
+import { Button, Tooltip } from "../components";
 import React from "react";
 
 export default {
@@ -6,8 +6,15 @@ export default {
   component: Tooltip,
 };
 
-const Template = (args) => <Tooltip {...args} />;
-
+const Template = (args) => {
+  return (
+    <div className="mt-lg pt-lg text-center" style={{ height: `100vh` }}>
+      <Tooltip {...args}>
+        <Button type={`primary`}></Button>
+      </Tooltip>
+    </div>
+  );
+};
 export const TooltipTop = Template.bind({});
 export const TooltipBottom = Template.bind({});
 export const TooltipLeft = Template.bind({});
@@ -15,19 +22,20 @@ export const TooltipRight = Template.bind({});
 
 TooltipTop.args = {
   position: `top`,
-  mode: `light`
+  mode: `light`,
+  label: `Primary Button`,
 };
 TooltipBottom.args = {
   position: `bottom`,
-  mode: `light`
+  mode: `light`,
 };
 
 TooltipLeft.args = {
-  position: `left`,
-  mode: `light`
+  position: `right`,
+  mode: `light`,
 };
 
 TooltipRight.args = {
-  position: `right`,
-  mode: `light`
+  position: `left`,
+  mode: `light`,
 };

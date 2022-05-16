@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles.css";
-export const Tooltip = ({ position, mode = `light` }) => {
+export const Tooltip = ({ children, position, mode = `light`, label, extendedStyles }) => {
   const style = {
     color: mode === `dark` ? `black` : `var(--kaali-font-color)`,
     backgroundColor: mode === `dark` ? `var(--kaali-font-color)` : `black`,
   };
+  const [showTooltip, setShowTooltip] = useState(false);
   return (
-    <button class="btn btn-demo" style={style}>
-      {position}{" "}
-      <span class={`tooltip  tooltip-${position || `top`} tooltip-${mode}`} style={style}>
-        {position || `top`}
+    <div>
+      <span
+       style={{ position: `relative` }}
+        onMouseOver={() => {
+          console.log(`on mouse over`);
+          setShowTooltip(true);
+        }}
+        onMouseLeave={() => {
+          console.log(`on mouse leave`);
+          setShowTooltip(false);
+        }}
+      >
+        {children}
+        <span
+       
+        className={`tooltip tooltip-${position || `top`} tooltip-${mode}` }
+        style={{...style, visibility: showTooltip ? `visible` : `hidden`,}}
+      >
+        {label || `label `}
       </span>
-    </button>
+      </span>
+     
+    </div>
   );
 };

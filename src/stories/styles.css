@@ -7,6 +7,23 @@
 .carousel-button {
   transform: translateY(0px);
 }
+.tooltip {
+  text-align: center;
+  width: fit-content;
+  padding: 8px;
+}
+.tooltip.tooltip-top {
+  top: -50px;
+  right: 0;
+  left: 0;
+}
+.tooltip.tooltip-bottom {
+  transform: translateX(-50%);
+  left: 50%;
+}
+.tooltip.tooltip-bottom::after {
+  top: -26%;
+}
 /* .modal {
   display: block;
 } */
