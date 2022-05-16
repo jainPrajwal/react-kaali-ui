@@ -8,6 +8,7 @@ export const Tooltip = ({ children, position, mode = `light`, label, extendedSty
   const [showTooltip, setShowTooltip] = useState(false);
   return (
     <div>
+
       <span
        style={{ position: `relative` }}
         onMouseOver={() => {
@@ -28,6 +29,9 @@ export const Tooltip = ({ children, position, mode = `light`, label, extendedSty
         {label || `label `}
       </span>
       </span>
+     
+
+
      
     </div>
   );
