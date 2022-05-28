@@ -17,11 +17,13 @@ export const Tooltip = ({
       <span
         style={{ position: `relative` }}
         onMouseOver={() => {
-          console.log(`on mouse over`);
+         
+          
           setShowTooltip(true);
         }}
         onMouseLeave={() => {
-          console.log(`on mouse leave`);
+          
+          
           setShowTooltip(false);
         }}
       >

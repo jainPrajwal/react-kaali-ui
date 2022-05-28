@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import {
   ModalBody,
@@ -21,6 +21,33 @@ const Template = (args) => {
   const [isHidden, Hide] = useState(true);
   const { modalHeader } = args;
 
+  const ModalRef = useRef();
+  useEffect(() => {
+    document.addEventListener(
+      `click`,
+      (e) => {
+        if (ModalRef.current && ModalRef.current.contains(e.target) === false) {
+          Hide(true);
+        }
+      },
+      true
+    );
+
+    return () => {
+      document.removeEventListener(
+        `click`,
+        (e) => {
+          if (
+            ModalRef.current &&
+            ModalRef.current.contains(e.target) === false
+          ) {
+            Hide(true);
+          }
+        },
+        true
+      );
+    };
+  }, []);
   const handleModalClose = () => {
     Hide(true);
   };
@@ -31,7 +58,6 @@ const Template = (args) => {
         className="btn btn-like"
         onClick={() => {
           Hide(false);
-          console.log("hide", isHidden);
         }}
       >
         <img
@@ -43,7 +69,11 @@ const Template = (args) => {
       {!isHidden && (
         <Modal>
           <ModalOverlay isHidden={isHidden}>
-            <div className="modal" style={{display: isHidden ? `none`: `block`}}>
+            <div
+              ref={ModalRef}
+              className="modal"
+              style={{ display: isHidden ? `none` : `block` }}
+            >
               <ModalContainer>
                 <ModalHeader handleModalClose={handleModalClose}>
                   {modalHeader || `Modal Header`}
@@ -107,6 +137,35 @@ const Template2 = (args) => {
   const [isHidden, Hide] = useState(true);
   const { modalHeader } = args;
 
+  const ModalRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener(
+      `click`,
+      (e) => {
+        if (ModalRef.current && ModalRef.current.contains(e.target) === false) {
+          Hide(true);
+        }
+      },
+      true
+    );
+
+    return () => {
+      document.removeEventListener(
+        `click`,
+        (e) => {
+          if (
+            ModalRef.current &&
+            ModalRef.current.contains(e.target) === false
+          ) {
+            Hide(true);
+          }
+        },
+        true
+      );
+    };
+  }, []);
+
   const handleModalClose = () => {
     Hide(true);
   };
@@ -117,7 +176,6 @@ const Template2 = (args) => {
         className="btn btn-danger"
         onClick={() => {
           Hide(false);
-          console.log("hide", isHidden);
         }}
       >
         Log Out
@@ -125,7 +183,11 @@ const Template2 = (args) => {
       {!isHidden && (
         <Modal>
           <ModalOverlay isHidden={isHidden}>
-            <div className="modal">
+            <div
+              ref={ModalRef}
+              className="modal"
+              style={{ display: isHidden ? `none` : `block` }}
+            >
               <ModalContainer>
                 <ModalHeader handleModalClose={handleModalClose}>
                   {modalHeader || `Modal Header`}
@@ -136,7 +198,7 @@ const Template2 = (args) => {
                   <ModalRow>Are you sure you want to Logout?</ModalRow>
                   <div className="d-flex jc-end">
                     <button
-                      className="btn btn-secondary"
+                      className="btn btn-secondary mr-md"
                       id="collection-btn-done"
                       onClick={() => handleModalClose()}
                     >
