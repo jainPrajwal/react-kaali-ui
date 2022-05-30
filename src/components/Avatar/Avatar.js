@@ -1,14 +1,15 @@
 import React from "react";
 export const Avatar = ({
-  size,
+  size=`md`,
   isfallback,
   fallbackText,
   fallbackColor,
   showStatus,
+  imageUrl=`https://cdn1.vectorstock.com/i/1000x1000/23/70/man-avatar-icon-flat-vector-19152370.jpg`,
   typeOfStatus,
 }) => {
   return isfallback ? (
-    <div className="avatar-container">
+    
       <div className="image-container">
         <div
           className={`avatar-letter avatar-${size}`}
@@ -20,12 +21,12 @@ export const Avatar = ({
           <span className={`status status-${typeOfStatus}`}></span>
         )}
       </div>
-    </div>
+    
   ) : (
-    <div className="avatar-container">
-      <div className="image-container">
+   
+      <div className="image-container" style={{width: `fit-content`}}>
         <img
-          src="https://cdn1.vectorstock.com/i/1000x1000/23/70/man-avatar-icon-flat-vector-19152370.jpg"
+          src={imageUrl}
           alt="avatar"
           className={`avatar avatar-${size}`}
         />
@@ -33,6 +34,6 @@ export const Avatar = ({
           <span className={`status status-${typeOfStatus}`}></span>
         )}
       </div>
-    </div>
+   
   );
 };
