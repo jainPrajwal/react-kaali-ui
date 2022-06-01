@@ -18,4 +18,7 @@ ImageAvatar.args = {
   fallbackColor: "var(--kaali-danger)",
   showStatus: true,
   typeOfStatus: "available",
+  isVerified: false,
+  sizeOfStatus: `md`,
+  
 };
