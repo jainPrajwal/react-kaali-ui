@@ -1,6 +1,6 @@
 {
   "name": "kaali-ui",
-  "version": "2.3.8",
+  "version": "2.3.9",
   "description": "First Story Book App",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
