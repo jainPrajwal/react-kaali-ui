@@ -34,7 +34,6 @@
   width: 64px;
   height: 64px;
   border-top: 8px solid var(--kaali-primary);
-
   animation: spin 1s cubic-bezier(.5,0,.5,1) infinite;
   -webkit-animation: spin 1s cubic-bezier(.5,0,.5,1) infinite;
 }
