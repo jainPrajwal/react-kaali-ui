@@ -5,4 +5,4 @@ export * from "./components/Carousel";
 export * from "./components/Modal";
 export * from "./components/CustomRadioButtons";
 export * from "./components/Tooltip";
-
+export * from "./components/Checkbox";

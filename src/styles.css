@@ -23,6 +23,7 @@
 .tooltip.tooltip-light.tooltip-left::after {
   border-color: transparent var(--kaali-main-background) transparent transparent;
 }
+
 @media only screen and (max-width: 480px) {
   .carousel-track-container {
     height: 100px;

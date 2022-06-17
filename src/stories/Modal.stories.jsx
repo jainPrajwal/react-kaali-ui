@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import {
+  Checkbox,
   ModalBody,
   ModalContainer,
   ModalFooter,
@@ -8,7 +9,7 @@ import {
   ModalOverlay,
   ModalRow,
 } from "../components";
-import { Checkbox } from "../components/Modal/Checkbox";
+
 import { Modal } from "../components/Modal/Modal";
 
 import "./styles.css";
@@ -106,7 +107,7 @@ const Template = (args) => {
                         </span>
                       </div>{" "}
                     </a>
-                    <Checkbox />
+                   <Checkbox />
                   </ModalRow>
                 </ModalBody>
                 <ModalFooter>

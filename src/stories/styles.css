@@ -34,8 +34,8 @@
   width: 64px;
   height: 64px;
   border-top: 8px solid var(--kaali-primary);
-  animation: spin 1s cubic-bezier(.5,0,.5,1) infinite;
-  -webkit-animation: spin 1s cubic-bezier(.5,0,.5,1) infinite;
+  animation: spin 1s cubic-bezier(.5, 0, .5, 1) infinite;
+  -webkit-animation: spin 1s cubic-bezier(.5, 0, .5, 1) infinite;
 }
 
 .tooltip.tooltip-light.tooltip-top::after {
@@ -52,6 +52,10 @@
 
 .tooltip.tooltip-light.tooltip-left::after {
   border-color: transparent var(--kaali-main-background) transparent transparent;
+}
+
+input[type="checkbox"]:disabled ~ .checkmark {
+  cursor: not-allowed;
 }
 
 @media only screen and (max-width: 480px) {
