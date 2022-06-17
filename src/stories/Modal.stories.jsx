@@ -76,7 +76,7 @@ const Template = (args) => {
               style={{ display: isHidden ? `none` : `block` }}
             >
               <ModalContainer>
-                <ModalHeader handleModalClose={handleModalClose}>
+                <ModalHeader>
                   {modalHeader || `Modal Header`}
                 </ModalHeader>
                 <hr className="modal-hr" />
@@ -190,7 +190,7 @@ const Template2 = (args) => {
               style={{ display: isHidden ? `none` : `block` }}
             >
               <ModalContainer>
-                <ModalHeader handleModalClose={handleModalClose}>
+                <ModalHeader >
                   {modalHeader || `Modal Header`}
                 </ModalHeader>
                 <hr className="modal-hr" />
