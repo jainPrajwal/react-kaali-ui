@@ -1,8 +1,8 @@
-import { useEffect, useState , } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import "../../styles.css";
 
-export const Alert = ({ type, text }) => {
+export const Alert = ({ type, text, cssAlert }) => {
   const [isHidden, Hide] = useState(false);
   useEffect(() => {
     setTimeout(() => {
@@ -11,7 +11,10 @@ export const Alert = ({ type, text }) => {
   }, [isHidden]);
 
   return (
-    <div className={`alert-content alert-${type} ${isHidden ? "hide" : ""}`}>
+    <div
+      style={{ ...cssAlert }}
+      className={`alert-content alert-${type} ${isHidden ? "hide" : ""}`}
+    >
       {text}
       <span
         className="btn-dismiss"

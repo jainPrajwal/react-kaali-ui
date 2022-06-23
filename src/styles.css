@@ -1,4 +1,5 @@
 @import url("https://kaaliui.netlify.app/kaali.css");
+
 .carousel-nav {
   position: relative;
   top: 10px;
@@ -7,6 +8,7 @@
 .carousel-button {
   transform: translateY(0px);
 }
+
 .modal {
   display: block;
 }
@@ -14,33 +16,42 @@
 .tooltip.tooltip-light.tooltip-top::after {
   border-color: var(--kaali-main-background) transparent transparent transparent;
 }
+
 .tooltip.tooltip-light.tooltip-bottom::after {
   border-color: transparent transparent var(--kaali-main-background) transparent;
 }
+
 .tooltip.tooltip-light.tooltip-right::after {
   border-color: transparent transparent transparent var(--kaali-main-background);
 }
+
 .tooltip.tooltip-light.tooltip-left::after {
   border-color: transparent var(--kaali-main-background) transparent transparent;
 }
+
+
 
 @media only screen and (max-width: 480px) {
   .carousel-track-container {
     height: 100px;
   }
+
   .carousel-button {
     transform: translateY(-26px);
     font-size: smaller;
     padding: 4px;
   }
+
   .carousel-image {
     height: 100%;
     object-fit: cover;
   }
+
   .carousel {
     width: 100%;
     height: 140px;
   }
+
   .carousel-button-left {
     left: 4px;
   }
@@ -48,6 +59,7 @@
   .carousel-button-right {
     right: 4px;
   }
+
   .carousel-indicator {
     width: 8px;
     height: 8px;
@@ -58,21 +70,26 @@
   .carousel-track-container {
     height: 150px;
   }
+
   .carousel-button {
     padding: 4px;
     transform: translateY(-30px);
     font-size: small;
   }
+
   .carousel {
     width: 100%;
     height: 150px;
   }
+
   .carousel-button-left {
     left: -10px;
   }
+
   .carousel-button-right {
     right: -10px;
   }
+
   .carousel-indicator {
     width: 8px;
     height: 8px;

@@ -9,6 +9,10 @@ export const Avatar = ({
   typeOfStatus = ``,
   isVerified = false,
   sizeOfStatus = `md`,
+  cssStatus,
+  cssText,
+  cssImage,
+  cssWrapperAvatar,
 }) => {
   return (
     <>
@@ -17,15 +21,19 @@ export const Avatar = ({
         href="https://kaaliui.netlify.app/components/avatar/avatar.css"
       />
       {isfallback ? (
-        <div className="image-container" style={{ width: `fit-content` }}>
+        <div
+          className="image-container"
+          style={{ width: `fit-content`, ...cssWrapperAvatar }}
+        >
           <div
             className={`avatar-letter avatar-${size}`}
-            style={{ background: fallbackColor }}
+            style={{ background: fallbackColor, ...cssText }}
           >
             {fallbackText}
           </div>
           {showStatus && (
             <span
+              style={{ ...cssStatus }}
               className={`status ${
                 isVerified ? `status-bg-verified` : `status-bg-${typeOfStatus} `
               } status-${sizeOfStatus} ${
@@ -36,18 +44,22 @@ export const Avatar = ({
             >
               {isVerified && (
                 <span
-                  class={`status-verified-checkmark status-verified-checkmark-${sizeOfStatus}`}
+                  className={`status-verified-checkmark status-verified-checkmark-${sizeOfStatus}`}
                 ></span>
               )}
             </span>
           )}
         </div>
       ) : (
-        <div className="image-container" style={{ width: `fit-content` }}>
+        <div
+          className="image-container"
+          style={{ width: `fit-content`, ...cssWrapper }}
+        >
           <img
             src={imageUrl}
             alt="avatar"
             className={`avatar avatar-${size}`}
+            style={{ ...cssImage }}
           />
           {showStatus && (
             <span
@@ -61,7 +73,8 @@ export const Avatar = ({
             >
               {isVerified && (
                 <span
-                  class={`status-verified-checkmark status-verified-checkmark-${sizeOfStatus}`}
+                  style={{ ...cssStatus }}
+                  className={`status-verified-checkmark status-verified-checkmark-${sizeOfStatus}`}
                 ></span>
               )}
             </span>

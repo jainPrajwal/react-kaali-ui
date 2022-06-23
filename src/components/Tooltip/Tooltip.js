@@ -5,7 +5,7 @@ export const Tooltip = ({
   position = `top`,
   mode = `light`,
   label = `label`,
-  css={},
+  cssTooltip = {},
 }) => {
   const style = {
     color: mode === `dark` ? `black` : `var(--kaali-font-color)`,
@@ -17,20 +17,21 @@ export const Tooltip = ({
       <span
         style={{ position: `relative` }}
         onMouseOver={() => {
-         
-          
           setShowTooltip(true);
         }}
         onMouseLeave={() => {
-          
-          
           setShowTooltip(false);
         }}
       >
         {children}
         <span
           className={`tooltip tooltip-${position} tooltip-${mode}`}
-          style={{ ...style, ...css, visibility: showTooltip ? `visible` : `hidden` }}
+          style={{
+            ...style,
+
+            visibility: showTooltip ? `visible` : `hidden`,
+            ...cssTooltip,
+          }}
         >
           {label}
         </span>
