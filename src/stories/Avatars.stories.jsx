@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import { Avatar } from "../components";
@@ -20,5 +19,8 @@ ImageAvatar.args = {
   typeOfStatus: "available",
   isVerified: false,
   sizeOfStatus: `md`,
-  
+  cssStatus: {},
+  cssText: {},
+  cssImage: {},
+  cssWrapperAvatar: {},
 };

@@ -13,7 +13,19 @@ export const AlertDanger = Template.bind({});
 export const AlertSuccess = Template.bind({});
 export const AlertInfo = Template.bind({});
 export const AlertWarning = Template.bind({});
-AlertDanger.args = { type: "danger", text: "This is a danger Alert" };
-AlertSuccess.args = { type: "success", text: "This is a success Alert" };
-AlertInfo.args = { type: "info", text: "This is a danger info" };
-AlertWarning.args = { type: "warning", text: "This is a warning Alert" };
+AlertDanger.args = {
+  cssAlert: {},
+  type: "danger",
+  text: "This is a danger Alert",
+};
+AlertSuccess.args = {
+  cssAlert: {},
+  type: "success",
+  text: "This is a success Alert",
+};
+AlertInfo.args = { cssAlert: {}, type: "info", text: "This is a danger info" };
+AlertWarning.args = {
+  cssAlert: {},
+  type: "warning",
+  text: "This is a warning Alert",
+};

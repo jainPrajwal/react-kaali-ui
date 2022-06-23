@@ -9,4 +9,10 @@ const Template = (args) => <Loader {...args} />;
 
 export const PageLoader = Template.bind({});
 
-PageLoader.args = {};
+PageLoader.args = {
+  borderWidth: `12px`,
+  borderTopColor: `orangered`,
+  css: {},
+  width: 64,
+  height: 64,
+};

@@ -1,15 +1,16 @@
-import React from 'react';
-import { Button } from '../components';
+import React from "react";
+import { Button } from "../components";
 // import {Button} from "../components/Button/Button";
 
 import "./styles.css";
 
 export default {
   title: "Button",
-  component: Button
-}
+  component: Button,
+  argTypes: { onClickHandler: { action: "clicked" } },
+};
 
-const Template = (args) => <Button {...args} />
+const Template = (args) => <Button {...args}> Primary</Button>;
 
 export const PrimaryButton = Template.bind({});
 export const SecondaryButton = Template.bind({});
@@ -18,21 +19,30 @@ export const WarningButton = Template.bind({});
 export const DangerButton = Template.bind({});
 
 PrimaryButton.args = {
-  type: "primary"
-}
+  cssButton: {},
+  isDisabled: false,
+  type: "primary",
+};
 
 SecondaryButton.args = {
-  type: "secondary"
-}
+  cssButton: {},
+  isDisabled: false,
+  type: "secondary",
+};
 
 SuccessButton.args = {
-  type: "success"
-}
+  cssButton: {},
+  isDisabled: false,
+  type: "success",
+};
 
 WarningButton.args = {
-  type: "warning"
-}
+  cssButton: {},
+  isDisabled: false,
+  type: "warning",
+};
 
 DangerButton.args = {
-  type: "danger"
-}
+  cssButton: {},
+  type: "danger",
+};

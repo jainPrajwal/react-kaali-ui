@@ -23,19 +23,23 @@ export const TooltipRight = Template.bind({});
 TooltipTop.args = {
   position: `top`,
   mode: `light`,
+  cssTooltip: {},
   label: `Primary Button`,
 };
 TooltipBottom.args = {
   position: `bottom`,
   mode: `light`,
+  cssTooltip: {},
 };
 
 TooltipLeft.args = {
   position: `right`,
   mode: `light`,
+  cssTooltip: {},
 };
 
 TooltipRight.args = {
   position: `left`,
   mode: `light`,
+  cssTooltip: {},
 };
