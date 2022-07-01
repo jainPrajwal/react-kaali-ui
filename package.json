@@ -1,6 +1,6 @@
 {
   "name": "kaali-ui",
-  "version": "2.4.9",
+  "version": "2.5.2",
   "description": "Kaali UI: A Story Book App",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

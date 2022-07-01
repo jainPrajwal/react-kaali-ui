@@ -16,10 +16,7 @@ export const Avatar = ({
 }) => {
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://kaaliui.netlify.app/components/avatar/avatar.css"
-      />
+     
       {isfallback ? (
         <div
           className="image-container"
