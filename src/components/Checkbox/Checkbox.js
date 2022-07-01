@@ -1,5 +1,4 @@
 import React from "react";
-import "./checkbox.css";
 export const Checkbox = ({
   isChecked = false,
   label,
