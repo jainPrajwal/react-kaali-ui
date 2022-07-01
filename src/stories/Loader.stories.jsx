@@ -12,7 +12,7 @@ export const PageLoader = Template.bind({});
 PageLoader.args = {
   borderWidth: `12px`,
   borderTopColor: `orangered`,
-  css: {},
+  cssLoader: {},
   width: 64,
   height: 64,
 };

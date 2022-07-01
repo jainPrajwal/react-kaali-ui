@@ -28,16 +28,6 @@
   top: -26%;
 }
 
-.loader-page {
-  border: 8px solid #f3f3f3;
-  border-radius: 50%;
-  width: 64px;
-  height: 64px;
-  border-top: 8px solid var(--kaali-primary);
-  animation: spin 1s cubic-bezier(.5, 0, .5, 1) infinite;
-  -webkit-animation: spin 1s cubic-bezier(.5, 0, .5, 1) infinite;
-}
-
 .tooltip.tooltip-light.tooltip-top::after {
   border-color: var(--kaali-main-background) transparent transparent transparent;
 }

@@ -53,7 +53,7 @@ export const Avatar = ({
       ) : (
         <div
           className="image-container"
-          style={{ width: `fit-content`, ...cssWrapper }}
+          style={{ width: `fit-content`, ...cssWrapperAvatar }}
         >
           <img
             src={imageUrl}
