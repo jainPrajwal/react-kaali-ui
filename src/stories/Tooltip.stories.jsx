@@ -10,7 +10,7 @@ const Template = (args) => {
   return (
     <div className="mt-lg pt-lg text-center" style={{ height: `100vh` }}>
       <Tooltip {...args}>
-        <Button type={`primary`}></Button>
+        <Button type={`primary`}>Tooltip</Button>
       </Tooltip>
     </div>
   );
@@ -23,23 +23,27 @@ export const TooltipRight = Template.bind({});
 TooltipTop.args = {
   position: `top`,
   mode: `light`,
-  cssTooltip: {},
+  label: `tooltip`,
+  cssTooltip: {fontFamily: `sans-serif`},
   label: `Primary Button`,
 };
 TooltipBottom.args = {
   position: `bottom`,
   mode: `light`,
-  cssTooltip: {},
+  label: `tooltip`,
+  cssTooltip: {fontFamily: `sans-serif`},
 };
 
 TooltipLeft.args = {
   position: `right`,
   mode: `light`,
-  cssTooltip: {},
+  label: `tooltip`,
+  cssTooltip: {fontFamily: `sans-serif`},
 };
 
 TooltipRight.args = {
   position: `left`,
   mode: `light`,
-  cssTooltip: {},
+  label: `tooltip`,
+  cssTooltip: {fontFamily: `sans-serif`},
 };
