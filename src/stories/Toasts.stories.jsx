@@ -8,7 +8,7 @@ export default {
   title: `Toast`,
   decorators: [
     (Story) => {
-      console.log(`Story`);
+      
       return (
         <ToastProvider>
           <Story />

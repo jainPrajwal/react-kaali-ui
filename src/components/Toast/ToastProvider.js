@@ -1,25 +1,17 @@
-import React, { createContext, useReducer } from "react";
-import { v4 } from "uuid";
+import React, {  useReducer } from "react";
 import { Toast } from "./Toast";
 import { initialToastState } from "./ToastReducer";
 import { toastReducer } from "./ToastReducer";
 import "./Toast.css";
-export const ToastContext = createContext();
+import { ToastContext } from "./ToastContext";
+
 
 const ToastProvider = ({ children }) => {
   const [toastState, toastDispatch] = useReducer(
     toastReducer,
     initialToastState
     );
-    console.log(`provider`, toastState);
-  // toastDispatch({
-  //   type: "ADD_TOAST",
-  //   payload: {
-  //     id: v4(),
-  //     type: "SUCCESS",
-  //     message: "new notification",
-  //   },
-  // });
+
   return (
     <ToastContext.Provider value={{ toastState, toastDispatch }}>
       <div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import { useToast } from "./useToast";
 import "./Toast.css";
@@ -27,7 +27,7 @@ const Toast = ({
   toastDelay,
   exit = false,
 }) => {
-  console.log("notifications rendering", type);
+  
 
   const { toastDispatch } = useToast();
 
