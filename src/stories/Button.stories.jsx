@@ -19,7 +19,7 @@ export const WarningButton = Template.bind({});
 export const DangerButton = Template.bind({});
 
 PrimaryButton.args = {
-  cssButton: {},
+  cssButton: {width: `400px`},
   isDisabled: false,
   type: "primary",
 };
