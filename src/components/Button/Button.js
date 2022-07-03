@@ -25,7 +25,7 @@ export const Button = ({
     if (!isRippling) setCoords({ x: -1, y: -1 });
   }, [isRippling]);
 
-  console.log(`css`, cssButton)
+  
   return (
     <button
       className={`btn btn-${type} overflow-hidden`}

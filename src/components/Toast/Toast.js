@@ -2,23 +2,9 @@ import React, { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import { useToast } from "./useToast";
 import "./Toast.css";
+import { handleCloseToast } from "./utils/handleCloseToast";
 
-export const handleCloseToast = ({  toastDispatch, id }) => {
-  toastDispatch({
-    type: `SET_EXIT`,
-    payload: {
-      id,
-    },
-  });
-  setTimeout(() => {
-    toastDispatch({
-      type: "REMOVE_TOAST",
-      payload: {
-        id,
-      },
-    });
-  }, 400);
-};
+
 
 const Toast = ({
   type = `success`,

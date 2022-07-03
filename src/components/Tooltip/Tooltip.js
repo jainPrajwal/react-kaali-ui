@@ -15,8 +15,6 @@ export const Tooltip = ({
   return (
     <>
       <div
-       
-        style={{ position: `relative`, width:`fit-content` }}
         onMouseOver={() => {
           setShowTooltip(true);
         }}
