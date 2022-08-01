@@ -5,6 +5,7 @@
 # Kaali UI
   A React component library which makes web development easier by helping in providing beautiful reusable and ready-to-use components that can be used across various react apps.
 </div>
+
 # Installation
 
 To install use the following command:
