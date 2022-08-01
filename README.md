@@ -1,10 +1,10 @@
+
 <div align="center">
-  <img src="src/assets/financyy-logo.png" height="120" width="120" alt="Financyy Logo"/>
-  
+   <img src="https://kaaliui.netlify.app/assets/images/kali-icon.ico" alt="kaaliUI" height="120" width="120">
+
 # Kaali UI
   A React component library which makes web development easier by helping in providing beautiful reusable and ready-to-use components that can be used across various react apps.
 </div>
-
 # Installation
 
 To install use the following command:
