@@ -5,6 +5,20 @@ import "./styles.css";
 export default {
   title: "Avatar",
   component: Avatar,
+  argTypes: {
+    size: {
+      options: [`lg`, `md`, `sm`],
+      control: { type: `radio` },
+    },
+    sizeOfStatus: {
+      options: [`md`, `sm`],
+      control: { type: `radio` },
+    },
+    typeOfStatus: {
+      options: [`available`, `do-not-disturb`],
+      control: { type: `radio` },
+    },
+  },
 };
 
 const Template = (args) => <Avatar {...args} />;
@@ -19,8 +33,9 @@ ImageAvatar.args = {
   typeOfStatus: "available",
   isVerified: false,
   sizeOfStatus: `md`,
-  cssStatus: {},
-  cssText: {},
-  cssImage: {},
-  cssWrapperAvatar: {},
+  styleStatus: {},
+  styleText: {},
+  styleImage: {},
+  styleWrapperAvatar: {},
+  imageUrl: `https://cdn1.vectorstock.com/i/1000x1000/23/70/man-avatar-icon-flat-vector-19152370.jpg`
 };

@@ -5,12 +5,13 @@ export const Tooltip = ({
   position = `top`,
   mode = `light`,
   label = `label`,
-  cssTooltip = {},
+  style = {},
 }) => {
-  const style = {
-    color: mode === `dark` ? `black` : `var(--kaali-font-color)`,
-    backgroundColor: mode === `dark` ? `var(--kaali-font-color)` : `black`,
+  const styleTooltip = {
+    color: mode === `dark` ? `black` : `#f3f4f6`,
+    backgroundColor: mode === `dark` ? `#f3f4f6` : `black`,
   };
+
   const [showTooltip, setShowTooltip] = useState(false);
   return (
     <>
@@ -21,15 +22,15 @@ export const Tooltip = ({
         onMouseLeave={() => {
           setShowTooltip(false);
         }}
+        style={{ position: `relative`, width: `fit-content` }}
       >
         {children}
         <span
           className={`tooltip tooltip-${position} tooltip-${mode}`}
           style={{
-            ...style,
-
+            ...styleTooltip,
             visibility: showTooltip ? `visible` : `hidden`,
-            ...cssTooltip,
+            ...style,
           }}
         >
           {label}

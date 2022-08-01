@@ -5,15 +5,15 @@ export const Checkbox = ({
   onChangeHandler,
   isDisabled = false,
   backgroundColor,
-  cssCheckmark={},
-  cssLabel={},
-  cssCheckbox={},
+  styleCheckmark={},
+  styleLabel={},
+  styleCheckbox={},
 }) => {
   return (
-    <label className="checkbox-label" style={{ ...cssLabel }}>
+    <label className="checkbox-label" style={{ ...styleLabel }}>
       <input
         type="checkbox"
-        style={{ ...cssCheckbox }}
+        style={{ ...styleCheckbox }}
         checked={isChecked}
         disabled={isDisabled}
         onChange={() => {
@@ -24,7 +24,7 @@ export const Checkbox = ({
       />
       <span
         className="checkmark"
-        style={{ backgroundColor: backgroundColor, ...cssCheckmark }}
+        style={{ backgroundColor: backgroundColor, ...styleCheckmark }}
       ></span>
       {label}
     </label>

@@ -3,34 +3,33 @@ export const Avatar = ({
   size = `md`,
   isfallback = false,
   fallbackText = ``,
-  fallbackColor = `var)`,
+  fallbackColor = ``,
   showStatus = false,
   imageUrl = `https://cdn1.vectorstock.com/i/1000x1000/23/70/man-avatar-icon-flat-vector-19152370.jpg`,
   typeOfStatus = ``,
   isVerified = false,
   sizeOfStatus = `md`,
-  cssStatus,
-  cssText,
-  cssImage,
-  cssWrapperAvatar,
+  styleStatus,
+  styleText = {},
+  styleImage = {},
+  styleWrapperAvatar = {},
 }) => {
   return (
     <>
-     
       {isfallback ? (
         <div
           className="image-container"
-          style={{ width: `fit-content`, ...cssWrapperAvatar }}
+          style={{ width: `fit-content`, ...styleWrapperAvatar }}
         >
           <div
             className={`avatar-letter avatar-${size}`}
-            style={{ background: fallbackColor, ...cssText }}
+            style={{ background: fallbackColor, ...styleText }}
           >
             {fallbackText}
           </div>
           {showStatus && (
             <span
-              style={{ ...cssStatus }}
+              style={{ ...styleStatus }}
               className={`status ${
                 isVerified ? `status-bg-verified` : `status-bg-${typeOfStatus} `
               } status-${sizeOfStatus} ${
@@ -50,13 +49,13 @@ export const Avatar = ({
       ) : (
         <div
           className="image-container"
-          style={{ width: `fit-content`, ...cssWrapperAvatar }}
+          style={{ width: `fit-content`, ...styleWrapperAvatar }}
         >
           <img
             src={imageUrl}
             alt="avatar"
             className={`avatar avatar-${size}`}
-            style={{ ...cssImage }}
+            style={{ ...styleImage }}
           />
           {showStatus && (
             <span
@@ -70,7 +69,7 @@ export const Avatar = ({
             >
               {isVerified && (
                 <span
-                  style={{ ...cssStatus }}
+                  style={{ ...styleStatus }}
                   className={`status-verified-checkmark status-verified-checkmark-${sizeOfStatus}`}
                 ></span>
               )}

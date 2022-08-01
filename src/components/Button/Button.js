@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Button.css";
 export const Button = ({
-  type,
-  cssButton = {},
+  variant,
+  style= {},
   onClickHandler,
   isDisabled = false,
   children,
@@ -28,7 +28,7 @@ export const Button = ({
   
   return (
     <button
-      className={`btn btn-${type} overflow-hidden`}
+      className={`btn btn-${variant} overflow-hidden`}
       onClick={(e) => {
         const rectangle = e.target.getBoundingClientRect();
         setCoords({
@@ -39,7 +39,7 @@ export const Button = ({
       }}
       style={{
         position: `relative`,
-        ...cssButton,
+        ...style,
       }}
       disabled={isDisabled}
     >

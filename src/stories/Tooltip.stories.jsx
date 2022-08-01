@@ -4,13 +4,23 @@ import React from "react";
 export default {
   title: `Tooltip`,
   component: Tooltip,
+  argTypes: {
+    position: {
+      options: [`top`, `left`, `right`, `bottom`],
+      control: { type: `radio` },
+    },
+    mode: {
+      options: [`dark`, `light`],
+      control: { type: `radio` },
+    },
+  },
 };
 
 const Template = (args) => {
   return (
-    <div className="mt-lg pt-lg text-center" style={{ height: `100vh` }}>
+    <div className="mt-lg pt-lg d-flex jc-center">
       <Tooltip {...args}>
-        <Button type={`primary`}>Tooltip</Button>
+        <Button variant={`primary`}>Tooltip</Button>
       </Tooltip>
     </div>
   );
@@ -24,26 +34,26 @@ TooltipTop.args = {
   position: `top`,
   mode: `light`,
   label: `tooltip`,
-  cssTooltip: {fontFamily: `sans-serif`},
+  style: { fontFamily: `sans-serif` },
   label: `Primary Button`,
 };
 TooltipBottom.args = {
   position: `bottom`,
   mode: `light`,
   label: `tooltip`,
-  cssTooltip: {fontFamily: `sans-serif`},
+  style: { fontFamily: `sans-serif` },
 };
 
 TooltipLeft.args = {
-  position: `right`,
+  position: `left`,
   mode: `light`,
   label: `tooltip`,
-  cssTooltip: {fontFamily: `sans-serif`},
+  style: { fontFamily: `sans-serif` },
 };
 
 TooltipRight.args = {
   position: `left`,
   mode: `light`,
   label: `tooltip`,
-  cssTooltip: {fontFamily: `sans-serif`},
+  style: { fontFamily: `sans-serif` },
 };

@@ -36,3 +36,27 @@
     position: relative;
     z-index: 2;
 }
+
+.btn.btn-danger-outline {
+    background-color: transparent;
+    border: 1px solid var(--kaali-danger);
+    color: var(--kaali-danger);
+}
+
+.btn.btn-primary-outline {
+    background-color: transparent;
+    border: 1px solid var(--kaali-primary);
+    color: var(--kaali-primary);
+}
+
+.btn.btn-success-outline {
+    background-color: transparent;
+    border: 1px solid var(--kaali-success);
+    color: var(--kaali-success);
+}
+
+.btn.btn-warning-outline {
+    background-color: transparent;
+    border: 1px solid var(--kaali-warning);
+    color: var(--kaali-warning);
+}

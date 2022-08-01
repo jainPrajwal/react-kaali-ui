@@ -7,11 +7,19 @@ import "./styles.css";
 export default {
   title: `Checkbox`,
   component: Checkbox,
-  argTypes: { onChange: { action: "clicked" } },
+  argTypes: { onChangeHandler: { action: "clicked" } },
 };
 
 const Template = (args) => {
-  return <Checkbox {...args} />;
+  const [isChecked, setIsChecked] = useState(false);
+  const onChangeHandler = () => setIsChecked(!isChecked);
+  return (
+    <Checkbox
+      {...args}
+      isChecked={isChecked}
+      onChangeHandler={onChangeHandler}
+    />
+  );
 };
 
 export const CheckboxPrimary = Template.bind({});
@@ -19,7 +27,7 @@ export const CheckboxPrimary = Template.bind({});
 CheckboxPrimary.args = {
   isDisabled: false,
   isChecked: false,
-  cssCheckmark: {},
-  cssLabel: {},
-  cssCheckbox: {},
+  styleCheckmark: {},
+  styleLabel: {},
+  styleCheckbox: {},
 };

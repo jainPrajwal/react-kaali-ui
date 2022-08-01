@@ -1,5 +1,3 @@
-
-
 .carousel-nav {
   position: relative;
   top: 10px;
@@ -21,13 +19,6 @@
   border-color: transparent transparent var(--kaali-main-background) transparent;
 }
 
-.tooltip.tooltip-light.tooltip-right::after {
-  border-color: transparent transparent transparent var(--kaali-main-background);
-}
-
-.tooltip.tooltip-light.tooltip-left::after {
-  border-color: transparent var(--kaali-main-background) transparent transparent;
-}
 
 
 

@@ -1,4 +1,5 @@
 @import url("https://kaaliui.netlify.app/kaali.css");
+
 .carousel-nav {
   position: relative;
   top: 10px;
@@ -12,12 +13,14 @@
   text-align: center;
   width: fit-content;
   padding: 8px;
+  white-space: nowrap;
 }
 
 .tooltip.tooltip-top {
-  top: -50px;
+  top: -40px;
   right: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tooltip.tooltip-bottom {
@@ -38,16 +41,18 @@
 }
 
 .tooltip.tooltip-light.tooltip-right::after {
-  border-color: transparent transparent transparent var(--kaali-main-background);
+  border-color: transparent var(--kaali-main-background) transparent transparent;
+
 }
 
 .tooltip.tooltip-light.tooltip-left::after {
-  border-color: transparent var(--kaali-main-background) transparent transparent;
+  border-color: transparent transparent transparent var(--kaali-main-background);
 }
 
-input[type="checkbox"]:disabled ~ .checkmark {
+input[type="checkbox"]:disabled~.checkmark {
   cursor: not-allowed;
 }
+
 
 @media only screen and (max-width: 480px) {
   .carousel-track-container {

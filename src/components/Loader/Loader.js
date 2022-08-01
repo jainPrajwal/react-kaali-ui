@@ -4,12 +4,12 @@ export const Loader = ({
   height = 60,
   borderTopColor,
   borderWidth,
-  cssLoader={}
+  styleLoader={}
 }) => {
   return (
     <>
       <div
-        style={{ width, height, borderTopColor, borderWidth, ...cssLoader }}
+        style={{ width, height, borderTopColor, borderWidth, ...styleLoader }}
         className="loader-page"
       ></div>
     </>

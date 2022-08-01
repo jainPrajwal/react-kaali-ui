@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { v4 as uuid } from "uuid";
 import { useToast } from "./useToast";
 import "./Toast.css";
 import { handleCloseToast } from "./utils/handleCloseToast";

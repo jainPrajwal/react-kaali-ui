@@ -4,6 +4,12 @@ import React from "react";
 export default {
   title: `Radio Buttons`,
   component: RadioButton,
+  argTypes: {
+    color: {
+      options: [`Red`, `Blue`, `Green`, `Black`, `White`],
+      control: { type: `radio` },
+    },
+  },
 };
 
 const Template = (args) => <RadioButton {...args} />;

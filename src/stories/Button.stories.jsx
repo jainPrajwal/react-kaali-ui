@@ -1,48 +1,91 @@
 import React from "react";
 import { Button } from "../components";
-// import {Button} from "../components/Button/Button";
 
 import "./styles.css";
 
 export default {
   title: "Button",
   component: Button,
-  argTypes: { onClickHandler: { action: "clicked" } },
+  argTypes: {
+    onClickHandler: { action: "clicked" },
+    variant: {
+      options: [
+        `primary`,
+        `secondary`,
+        `danger`,
+        `warning`,
+        `primary-outline`,
+        `success-outline`,
+        `warning-outline`,
+        `danger-outline`,
+      ],
+      control: { type: `radio` },
+    },
+  },
 };
 
-const Template = (args) => <Button {...args}> Primary</Button>;
+const Template = (args) => <Button {...args}> {args.variant}</Button>;
 
 export const PrimaryButton = Template.bind({});
 export const SecondaryButton = Template.bind({});
 export const SuccessButton = Template.bind({});
 export const WarningButton = Template.bind({});
 export const DangerButton = Template.bind({});
+export const PrimaryOutlineButton = Template.bind({});
+export const DangerOutlineButton = Template.bind({});
+export const SuccessOutlineButton = Template.bind({});
+export const WarningOutlineButton = Template.bind({});
 
 PrimaryButton.args = {
-  cssButton: {width: `400px`},
+  style: { width: `400px` },
   isDisabled: false,
-  type: "primary",
+  variant: "primary",
 };
 
 SecondaryButton.args = {
-  cssButton: {},
+  style: {},
   isDisabled: false,
-  type: "secondary",
+  variant: "secondary",
 };
 
 SuccessButton.args = {
-  cssButton: {},
+  style: {},
   isDisabled: false,
-  type: "success",
+  variant: "success",
 };
 
 WarningButton.args = {
-  cssButton: {},
+  style: {},
   isDisabled: false,
-  type: "warning",
+  variant: "warning",
 };
 
 DangerButton.args = {
-  cssButton: {},
-  type: "danger",
+  style: {},
+  isDisabled: false,
+  variant: "danger",
+};
+
+DangerOutlineButton.args = {
+  style: {},
+  isDisabled: false,
+  variant: "danger-outline",
+};
+
+PrimaryOutlineButton.args = {
+  style: {},
+  isDisabled: false,
+  variant: `primary-outline`,
+};
+
+SuccessOutlineButton.args = {
+  style: {},
+  isDisabled: false,
+  variant: `success-outline`,
+};
+
+WarningOutlineButton.args = {
+  style: {},
+  isDisabled: false,
+  variant: `warning-outline`,
 };
