@@ -22,7 +22,7 @@ export const Tooltip = ({
         onMouseLeave={() => {
           setShowTooltip(false);
         }}
-        style={{ position: `relative`, width: `fit-content` }}
+      
       >
         {children}
         <span
